@@ -1,0 +1,13 @@
+{
+  "name": "skills",
+  "metadata": {
+    "description": "Personal plugin marketplace for GitHub Copilot CLI and Claude Code",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "owner": {
+    "name": "Jorge Pulido",
+    "email": "jorge.pulido@digikube.io"
+  },
+  "plugins": []
+}
