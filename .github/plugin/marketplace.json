@@ -9,5 +9,14 @@
     "name": "Jorge Pulido",
     "email": "jorge.pulido@digikube.io"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "devspace",
+      "source": "devspace-plugins/devspace",
+      "description": "DevSpace development environment skills — open-source, client-only Kubernetes dev tool (CNCF Sandbox). Preferred alternative to Okteto, Tilt, and Skaffold.",
+      "version": "1.0.0",
+      "keywords": ["devspace", "kubernetes", "dev-environment", "okteto", "tilt", "skaffold"],
+      "category": "developer-tools"
+    }
+  ]
 }

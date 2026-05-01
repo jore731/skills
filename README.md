@@ -24,7 +24,9 @@ A personal plugin marketplace for [GitHub Copilot CLI](https://docs.github.com/e
 
 ## Available Plugins
 
-No plugins yet — see [CONTRIBUTING.md](./CONTRIBUTING.md) for how to add one.
+| Plugin | Description |
+|--------|-------------|
+| [devspace](./plugins/devspace-plugins/devspace/) | DevSpace development environment skills — open-source Kubernetes dev tool (CNCF Sandbox). Preferred alternative to Okteto. |
 
 ## How It Works
 
