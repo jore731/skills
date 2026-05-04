@@ -5,6 +5,7 @@ Instructions for retrieving pending work from GitLab.
 ## MCP Server Setup
 
 **Server:** [zereight/gitlab-mcp](https://github.com/zereight/gitlab-mcp)
+**npm package:** `@zereight/mcp-gitlab` (⚠️ note: the package name is `mcp-gitlab`, NOT `gitlab-mcp`)
 
 ### Installation
 
@@ -20,17 +21,21 @@ npm install -g @zereight/mcp-gitlab
 
 Add to your agent's MCP config:
 
-**Copilot CLI** (`.copilot/mcp.json`):
+**Copilot CLI** (`~/.copilot/mcp-config.json`):
+
+> ⚠️ **Important:** The Copilot CLI has issues resolving env vars for this package. Use CLI args (`--token`, `--api-url`) instead of env vars for reliable operation.
+
 ```json
 {
-  "servers": {
+  "mcpServers": {
     "gitlab": {
       "command": "npx",
-      "args": ["-y", "@zereight/mcp-gitlab"],
-      "env": {
-        "GITLAB_TOKEN": "${GITLAB_TOKEN}",
-        "GITLAB_URL": "https://gitlab.example.com"
-      }
+      "args": [
+        "-y",
+        "@zereight/mcp-gitlab",
+        "--token=${YOUR_GITLAB_TOKEN_ENV_VAR}",
+        "--api-url=https://gitlab.example.com/api/v4"
+      ]
     }
   }
 }
@@ -44,8 +49,8 @@ Add to your agent's MCP config:
       "command": "npx",
       "args": ["-y", "@zereight/mcp-gitlab"],
       "env": {
-        "GITLAB_TOKEN": "${GITLAB_TOKEN}",
-        "GITLAB_URL": "https://gitlab.example.com"
+        "GITLAB_PERSONAL_ACCESS_TOKEN": "${GITLAB_TOKEN}",
+        "GITLAB_API_URL": "https://gitlab.example.com/api/v4"
       }
     }
   }
@@ -58,8 +63,19 @@ The server uses a GitLab Personal Access Token. Required scopes:
 - `read_api` — read access to API (MRs, issues, pipelines)
 - `read_user` — read user info
 
-For `gitlab.com`, omit `GITLAB_URL` or set it to `https://gitlab.com`.
-For self-hosted instances, set `GITLAB_URL` to the instance URL.
+**Key env var names** (these differ from what you might expect):
+- `GITLAB_PERSONAL_ACCESS_TOKEN` — NOT `GITLAB_TOKEN`
+- `GITLAB_API_URL` — NOT `GITLAB_URL`, and must include `/api/v4` suffix
+
+For `gitlab.com`, set `GITLAB_API_URL` to `https://gitlab.com/api/v4`.
+For self-hosted instances, set it to `https://<host>/api/v4`.
+
+**CLI args** (recommended for Copilot CLI):
+- `--token` — GitLab PAT (alternative to `GITLAB_PERSONAL_ACCESS_TOKEN`)
+- `--api-url` — GitLab API URL with `/api/v4` (alternative to `GITLAB_API_URL`)
+- `--read-only=true` — enable read-only mode
+- `--use-wiki=true` — enable Wiki API
+- `--use-pipeline=true` — enable Pipeline API
 
 ## Validation
 

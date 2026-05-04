@@ -76,7 +76,7 @@ If no config file exists, guide the user through creating one step by step:
    If the user accepts, walk them through:
    - Installing the MCP server (npm/npx, Docker, or binary)
    - Configuring auth (tokens, env vars, login commands)
-   - Adding the server to their agent's MCP config (e.g., `.copilot/mcp.json`, `claude_desktop_config.json`)
+   - Adding the server to their agent's MCP config (e.g., `~/.copilot/mcp-config.json` for Copilot CLI, `claude_desktop_config.json` for Claude)
    - Verifying the server is reachable
 
    If the user declines MCPs, proceed with CLI or API-based `login_method`.

@@ -5,6 +5,7 @@ Instructions for retrieving pending work from Azure DevOps.
 ## MCP Server Setup
 
 **Server:** [microsoft/azure-devops-mcp](https://github.com/microsoft/azure-devops-mcp)
+**npm package:** `@azure-devops/mcp` (⚠️ note: package is `@azure-devops/mcp`, NOT `@microsoft/azure-devops-mcp`)
 
 ### Installation
 
@@ -22,16 +23,26 @@ npm install && npm run build
 
 Add to your agent's MCP config:
 
-**Copilot CLI** (`.copilot/mcp.json`):
+> ⚠️ **Key differences from typical MCP configs:**
+> - The org name is passed as a **positional argument** (just `"myorg"`, NOT a full URL)
+> - Auth method is selected via `--authentication <method>` CLI flag
+> - PAT auth expects `PERSONAL_ACCESS_TOKEN` env var containing **base64 of `email:pat`**
+
+**Copilot CLI** (`~/.copilot/mcp-config.json`):
 ```json
 {
-  "servers": {
+  "mcpServers": {
     "azure-devops": {
       "command": "npx",
-      "args": ["-y", "@azure-devops/mcp"],
+      "args": [
+        "-y",
+        "@azure-devops/mcp",
+        "myorg",
+        "--authentication",
+        "pat"
+      ],
       "env": {
-        "AZURE_DEVOPS_ORG": "https://dev.azure.com/<org>",
-        "AZURE_DEVOPS_PAT": "${AZDO_TOKEN}"
+        "PERSONAL_ACCESS_TOKEN": "${MY_AZDO_PAT_B64}"
       }
     }
   }
@@ -44,27 +55,45 @@ Add to your agent's MCP config:
   "mcpServers": {
     "azure-devops": {
       "command": "npx",
-      "args": ["-y", "@azure-devops/mcp"],
+      "args": ["-y", "@azure-devops/mcp", "myorg", "--authentication", "pat"],
       "env": {
-        "AZURE_DEVOPS_ORG": "https://dev.azure.com/<org>",
-        "AZURE_DEVOPS_PAT": "${AZDO_TOKEN}"
+        "PERSONAL_ACCESS_TOKEN": "${MY_AZDO_PAT_B64}"
       }
     }
   }
 }
 ```
 
-### Authentication
+### Authentication methods
 
-The server uses an Azure DevOps Personal Access Token (PAT). Required scopes:
+The server supports multiple auth methods via `--authentication <method>`:
+
+| Method | Flag | Env var | Notes |
+|--------|------|---------|-------|
+| **Interactive** (default) | `--authentication interactive` | none | Opens browser, device code flow |
+| **Azure CLI** | `--authentication azcli` | none | Reuses `az login` session |
+| **PAT** | `--authentication pat` | `PERSONAL_ACCESS_TOKEN` | base64 of `email:pat` |
+| **Env var (Bearer)** | `--authentication envvar` | `PERSONAL_ACCESS_TOKEN` | Raw bearer token |
+
+**PAT auth setup:**
+1. Create a PAT at: `https://dev.azure.com/<org>/_usersSettings/tokens`
+2. Encode as base64: `echo -n "your-email@example.com:your-pat" | base64`
+3. Set the base64 string as `PERSONAL_ACCESS_TOKEN` env var
+
+Required PAT scopes:
 - **Work Items** — Read
 - **Code** — Read (for PRs)
 - **Build** — Read (for pipelines)
 - **Project and Team** — Read
 
-Create a PAT at: `https://dev.azure.com/<org>/_usersSettings/tokens`
+### Domain filtering (optional)
 
-Set the token as an env var (e.g., `AZDO_TOKEN`) and reference it in the MCP config.
+Limit which tool categories are loaded with `--domains`:
+```
+--domains core,work,repositories,pipelines
+```
+
+Available domains: `core`, `work`, `work-items`, `search`, `test-plans`, `repositories`, `wiki`, `pipelines`, `advanced-security`
 
 ## Validation
 
