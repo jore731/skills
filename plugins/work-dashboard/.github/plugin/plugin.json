@@ -1,0 +1,12 @@
+{
+  "name": "work-dashboard",
+  "description": "Aggregates pending work (PRs, issues, CI failures, work items) across GitHub, GitLab, and Azure DevOps into a unified markdown dashboard. Supports multiple accounts, sources, and repo blacklists via a declarative config file.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jorge Pulido",
+    "email": "jorge.pulido@digikube.io"
+  },
+  "keywords": ["dashboard", "github", "gitlab", "azure-devops", "issues", "pull-requests", "work-items", "ci", "productivity"],
+  "category": "productivity",
+  "skills": ["./skills/work-dashboard"]
+}

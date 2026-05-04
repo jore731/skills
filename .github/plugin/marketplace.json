@@ -17,6 +17,14 @@
       "version": "1.0.0",
       "keywords": ["devspace", "kubernetes", "dev-environment", "okteto", "tilt", "skaffold"],
       "category": "developer-tools"
+    },
+    {
+      "name": "work-dashboard",
+      "source": "work-dashboard",
+      "description": "Aggregates pending work (PRs, issues, CI failures, work items) across GitHub, GitLab, and Azure DevOps into a unified markdown dashboard.",
+      "version": "1.0.0",
+      "keywords": ["dashboard", "github", "gitlab", "azure-devops", "issues", "pull-requests", "work-items", "ci", "productivity"],
+      "category": "productivity"
     }
   ]
 }
