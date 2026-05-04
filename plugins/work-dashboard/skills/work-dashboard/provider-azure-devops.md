@@ -10,7 +10,7 @@ Instructions for retrieving pending work from Azure DevOps.
 
 ```bash
 # Option 1: npx (no install needed)
-npx @microsoft/azure-devops-mcp
+npx @azure-devops/mcp
 
 # Option 2: Clone and run
 git clone https://github.com/microsoft/azure-devops-mcp.git
@@ -28,7 +28,7 @@ Add to your agent's MCP config:
   "servers": {
     "azure-devops": {
       "command": "npx",
-      "args": ["-y", "@microsoft/azure-devops-mcp"],
+      "args": ["-y", "@azure-devops/mcp"],
       "env": {
         "AZURE_DEVOPS_ORG": "https://dev.azure.com/<org>",
         "AZURE_DEVOPS_PAT": "${AZDO_TOKEN}"
@@ -44,7 +44,7 @@ Add to your agent's MCP config:
   "mcpServers": {
     "azure-devops": {
       "command": "npx",
-      "args": ["-y", "@microsoft/azure-devops-mcp"],
+      "args": ["-y", "@azure-devops/mcp"],
       "env": {
         "AZURE_DEVOPS_ORG": "https://dev.azure.com/<org>",
         "AZURE_DEVOPS_PAT": "${AZDO_TOKEN}"
