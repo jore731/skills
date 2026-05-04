@@ -10,10 +10,10 @@ Instructions for retrieving pending work from GitLab.
 
 ```bash
 # Option 1: npx (no install needed)
-npx @zereight/gitlab-mcp
+npx @zereight/mcp-gitlab
 
 # Option 2: npm global install
-npm install -g @zereight/gitlab-mcp
+npm install -g @zereight/mcp-gitlab
 ```
 
 ### Agent configuration
@@ -26,7 +26,7 @@ Add to your agent's MCP config:
   "servers": {
     "gitlab": {
       "command": "npx",
-      "args": ["-y", "@zereight/gitlab-mcp"],
+      "args": ["-y", "@zereight/mcp-gitlab"],
       "env": {
         "GITLAB_TOKEN": "${GITLAB_TOKEN}",
         "GITLAB_URL": "https://gitlab.example.com"
@@ -42,7 +42,7 @@ Add to your agent's MCP config:
   "mcpServers": {
     "gitlab": {
       "command": "npx",
-      "args": ["-y", "@zereight/gitlab-mcp"],
+      "args": ["-y", "@zereight/mcp-gitlab"],
       "env": {
         "GITLAB_TOKEN": "${GITLAB_TOKEN}",
         "GITLAB_URL": "https://gitlab.example.com"
