@@ -2,6 +2,89 @@
 
 Instructions for retrieving pending work from GitLab.
 
+## MCP Server Setup
+
+**Server:** [zereight/gitlab-mcp](https://github.com/zereight/gitlab-mcp)
+
+### Installation
+
+```bash
+# Option 1: npx (no install needed)
+npx @zereight/gitlab-mcp
+
+# Option 2: npm global install
+npm install -g @zereight/gitlab-mcp
+```
+
+### Agent configuration
+
+Add to your agent's MCP config:
+
+**Copilot CLI** (`.copilot/mcp.json`):
+```json
+{
+  "servers": {
+    "gitlab": {
+      "command": "npx",
+      "args": ["-y", "@zereight/gitlab-mcp"],
+      "env": {
+        "GITLAB_TOKEN": "${GITLAB_TOKEN}",
+        "GITLAB_URL": "https://gitlab.example.com"
+      }
+    }
+  }
+}
+```
+
+**Claude Code** (`claude_desktop_config.json` or project `.mcp.json`):
+```json
+{
+  "mcpServers": {
+    "gitlab": {
+      "command": "npx",
+      "args": ["-y", "@zereight/gitlab-mcp"],
+      "env": {
+        "GITLAB_TOKEN": "${GITLAB_TOKEN}",
+        "GITLAB_URL": "https://gitlab.example.com"
+      }
+    }
+  }
+}
+```
+
+### Authentication
+
+The server uses a GitLab Personal Access Token. Required scopes:
+- `read_api` — read access to API (MRs, issues, pipelines)
+- `read_user` — read user info
+
+For `gitlab.com`, omit `GITLAB_URL` or set it to `https://gitlab.com`.
+For self-hosted instances, set `GITLAB_URL` to the instance URL.
+
+## Validation
+
+After setup, verify connectivity:
+
+**Via MCP:** Call a tool to list projects or user info — should return results.
+
+**Via CLI:**
+```bash
+glab auth status
+```
+
+**Via API:**
+```bash
+curl -H "PRIVATE-TOKEN: $GITLAB_TOKEN" "https://<host>/api/v4/user" --silent | jq .username
+```
+
+If validation fails, check:
+- Token is valid and not expired
+- Token has `read_api` scope
+- `GITLAB_URL` points to the correct instance (include `https://`)
+- Network allows access to the GitLab host
+
+---
+
 ## Authentication
 
 Follow the `login_method` from the config. Common patterns:

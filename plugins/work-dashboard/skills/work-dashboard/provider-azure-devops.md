@@ -2,6 +2,95 @@
 
 Instructions for retrieving pending work from Azure DevOps.
 
+## MCP Server Setup
+
+**Server:** [microsoft/azure-devops-mcp](https://github.com/microsoft/azure-devops-mcp)
+
+### Installation
+
+```bash
+# Option 1: npx (no install needed)
+npx @microsoft/azure-devops-mcp
+
+# Option 2: Clone and run
+git clone https://github.com/microsoft/azure-devops-mcp.git
+cd azure-devops-mcp
+npm install && npm run build
+```
+
+### Agent configuration
+
+Add to your agent's MCP config:
+
+**Copilot CLI** (`.copilot/mcp.json`):
+```json
+{
+  "servers": {
+    "azure-devops": {
+      "command": "npx",
+      "args": ["-y", "@microsoft/azure-devops-mcp"],
+      "env": {
+        "AZURE_DEVOPS_ORG": "https://dev.azure.com/<org>",
+        "AZURE_DEVOPS_PAT": "${AZDO_TOKEN}"
+      }
+    }
+  }
+}
+```
+
+**Claude Code** (`claude_desktop_config.json` or project `.mcp.json`):
+```json
+{
+  "mcpServers": {
+    "azure-devops": {
+      "command": "npx",
+      "args": ["-y", "@microsoft/azure-devops-mcp"],
+      "env": {
+        "AZURE_DEVOPS_ORG": "https://dev.azure.com/<org>",
+        "AZURE_DEVOPS_PAT": "${AZDO_TOKEN}"
+      }
+    }
+  }
+}
+```
+
+### Authentication
+
+The server uses an Azure DevOps Personal Access Token (PAT). Required scopes:
+- **Work Items** — Read
+- **Code** — Read (for PRs)
+- **Build** — Read (for pipelines)
+- **Project and Team** — Read
+
+Create a PAT at: `https://dev.azure.com/<org>/_usersSettings/tokens`
+
+Set the token as an env var (e.g., `AZDO_TOKEN`) and reference it in the MCP config.
+
+## Validation
+
+After setup, verify connectivity:
+
+**Via MCP:** Call a tool to list projects in the org — should return results.
+
+**Via CLI:**
+```bash
+az devops project list --org https://dev.azure.com/<org> --output table
+```
+
+**Via API:**
+```bash
+curl -u ":<PAT>" "https://dev.azure.com/<org>/_apis/projects?api-version=7.1" --silent | jq '.value[].name'
+```
+
+If validation fails, check:
+- PAT is valid and not expired
+- PAT has the required scopes listed above
+- Organization URL is correct (include `https://dev.azure.com/`)
+- User has access to the organization
+- Network/proxy allows access to dev.azure.com
+
+---
+
 ## Authentication
 
 Follow the `login_method` from the config. Common patterns:

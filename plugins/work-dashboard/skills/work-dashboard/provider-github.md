@@ -2,6 +2,65 @@
 
 Instructions for retrieving pending work from GitHub.
 
+## MCP Server Setup
+
+**Server:** [github/github-mcp-server](https://github.com/github/github-mcp-server)
+
+The GitHub MCP server is **available by default in Copilot CLI** — no installation needed. For other agents (Claude Code, etc.), configure it manually:
+
+### Agent configuration (only needed outside Copilot CLI)
+
+**Claude Code** (`claude_desktop_config.json` or project `.mcp.json`):
+```json
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@github/github-mcp-server"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+    }
+  }
+}
+```
+
+### Authentication
+
+In Copilot CLI, the server uses the authenticated `gh` session — no extra token needed.
+
+For other agents, a Personal Access Token (PAT) is required. Scopes:
+- `repo` — access private repos, PRs, issues
+- `read:org` — list org repos
+- `workflow` — view workflow run status
+
+For multiple accounts, use `gh auth switch --user <account>` before running queries (Copilot CLI) or configure separate MCP server entries with different tokens (other agents).
+
+## Validation
+
+Verify connectivity by running a lightweight query:
+
+**Via MCP (Copilot CLI — already available):** Call `search_repositories` with `query: "user:<account>"` — should return repos.
+
+**Via CLI:**
+```bash
+gh auth switch --user <account>
+gh api user --jq '.login'
+```
+
+**Via API:**
+```bash
+curl -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/user --silent | jq .login
+```
+
+If validation fails, check:
+- `gh auth status` shows the correct account is active
+- Token (if used) is valid and has required scopes
+- Account name is correct
+- Network/proxy allows access to api.github.com
+
+---
+
 ## Authentication
 
 Follow the `login_method` from the config. Common patterns:

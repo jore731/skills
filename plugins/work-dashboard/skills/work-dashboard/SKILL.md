@@ -64,11 +64,33 @@ blacklist:
 
 ### First-run behavior
 
-If no config file exists, guide the user through creating one:
-1. Ask which platforms they use (GitHub, GitLab, Azure DevOps).
-2. For each, ask for account/org names and how to authenticate (free-text `login_method`).
-3. Ask if any repos or projects should be blacklisted.
-4. Write the config to the appropriate location.
+If no config file exists, guide the user through creating one step by step:
+
+1. **Ask which platforms they use** (GitHub, GitLab, Azure DevOps).
+
+2. **Recommend MCP servers.** Before configuring each source, suggest installing the corresponding MCP server for the best experience:
+   - **GitHub:** [github/github-mcp-server](https://github.com/github/github-mcp-server) — guide through install and auth setup
+   - **GitLab:** [zereight/gitlab-mcp](https://github.com/zereight/gitlab-mcp) — guide through install and token config
+   - **Azure DevOps:** [microsoft/azure-devops-mcp](https://github.com/microsoft/azure-devops-mcp) — guide through install and PAT config
+
+   If the user accepts, walk them through:
+   - Installing the MCP server (npm/npx, Docker, or binary)
+   - Configuring auth (tokens, env vars, login commands)
+   - Adding the server to their agent's MCP config (e.g., `.copilot/mcp.json`, `claude_desktop_config.json`)
+   - Verifying the server is reachable
+
+   If the user declines MCPs, proceed with CLI or API-based `login_method`.
+
+3. **Configure each source one at a time.** For each platform:
+   - Ask for account/org names.
+   - Ask how to authenticate (free-text `login_method`).
+   - **Validate immediately:** attempt to authenticate using the provided `login_method` and run a lightweight query (e.g., list 1 repo/project) to confirm connectivity.
+   - If validation fails, show the error and offer to retry or adjust the config before proceeding.
+   - Only move to the next source after the current one is validated.
+
+4. **Ask if any repos or projects should be blacklisted.**
+
+5. **Write the config** to the appropriate location (`.work-dashboard/config.yaml` or `~/.config/work-dashboard/config.yaml`).
 
 ## Data retrieval
 
