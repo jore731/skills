@@ -62,6 +62,16 @@ blacklist:
     - "OldProject"
 ```
 
+### Required token permissions
+
+When creating tokens for each source, ensure the following scopes are granted:
+
+| Source | Token scopes |
+|--------|-------------|
+| **GitHub** | `repo`, `read:org`, `workflow` |
+| **GitLab** | `read_api`, `read_user` |
+| **Azure DevOps** | Work Items: Read, Code: Read, Build: Read, Project and Team: Read |
+
 ### First-run behavior
 
 If no config file exists, guide the user through creating one step by step:
