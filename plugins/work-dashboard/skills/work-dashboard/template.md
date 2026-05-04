@@ -8,7 +8,7 @@ _Generated: {{ generated_at }}_
 | # | Title | Repo | Created | Status |
 |---|-------|------|---------|--------|
 {% for pr in pull_requests_authored %}
-| {{ pr.number }} | {{ pr.title }} | {{ pr.repo }} | {{ pr.created }} | {{ pr.status }} |
+| [#{{ pr.number }}]({{ pr.url }}) | {{ pr.title }} | {{ pr.repo }} | {{ pr.created }} | {{ pr.status }} |
 {% endfor %}
 {% endif %}
 
@@ -18,7 +18,7 @@ _Generated: {{ generated_at }}_
 | # | Title | Repo | Author | Requested |
 |---|-------|------|--------|-----------|
 {% for pr in pull_requests_reviewing %}
-| {{ pr.number }} | {{ pr.title }} | {{ pr.repo }} | {{ pr.author }} | {{ pr.requested }} |
+| [#{{ pr.number }}]({{ pr.url }}) | {{ pr.title }} | {{ pr.repo }} | {{ pr.author }} | {{ pr.requested }} |
 {% endfor %}
 {% endif %}
 
@@ -28,7 +28,7 @@ _Generated: {{ generated_at }}_
 | # | Title | Repo | Priority | Labels |
 |---|-------|------|----------|--------|
 {% for issue in issues %}
-| {{ issue.number }} | {{ issue.title }} | {{ issue.repo }} | {{ issue.priority }} | {{ issue.labels }} |
+| [#{{ issue.number }}]({{ issue.url }}) | {{ issue.title }} | {{ issue.repo }} | {{ issue.priority }} | {{ issue.labels }} |
 {% endfor %}
 {% endif %}
 
@@ -38,7 +38,7 @@ _Generated: {{ generated_at }}_
 | Repo | Branch | Pipeline | Failed at | Error |
 |------|--------|----------|-----------|-------|
 {% for ci in ci_failures %}
-| {{ ci.repo }} | {{ ci.branch }} | {{ ci.pipeline }} | {{ ci.failed_at }} | {{ ci.error }} |
+| {{ ci.repo }} | {{ ci.branch }} | [{{ ci.pipeline }}]({{ ci.url }}) | {{ ci.failed_at }} | {{ ci.error }} |
 {% endfor %}
 {% endif %}
 
@@ -48,7 +48,7 @@ _Generated: {{ generated_at }}_
 | ID | Title | Project | Type | State | Iteration |
 |----|-------|---------|------|-------|-----------|
 {% for wi in work_items %}
-| {{ wi.id }} | {{ wi.title }} | {{ wi.project }} | {{ wi.type }} | {{ wi.state }} | {{ wi.iteration }} |
+| [{{ wi.id }}]({{ wi.url }}) | {{ wi.title }} | {{ wi.project }} | {{ wi.type }} | {{ wi.state }} | {{ wi.iteration }} |
 {% endfor %}
 {% endif %}
 
