@@ -25,6 +25,14 @@
       "version": "1.0.0",
       "keywords": ["dashboard", "github", "gitlab", "azure-devops", "issues", "pull-requests", "work-items", "ci", "productivity"],
       "category": "productivity"
+    },
+    {
+      "name": "write-a-skill",
+      "source": "write-a-skill",
+      "description": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.",
+      "version": "1.0.0",
+      "keywords": ["skill", "plugin", "create", "write", "build", "scaffold", "productivity"],
+      "category": "productivity"
     }
   ]
 }
