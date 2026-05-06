@@ -33,6 +33,14 @@
       "version": "1.0.0",
       "keywords": ["skill", "plugin", "create", "write", "build", "scaffold", "productivity"],
       "category": "productivity"
+    },
+    {
+      "name": "renta",
+      "source": "renta",
+      "description": "Guía para la declaración de la renta en España (IRPF). Deducciones estatales y autonómicas, tratamiento fiscal de inversiones y brokers, y referencias al Manual Práctico de Renta de la AEAT.",
+      "version": "1.0.0",
+      "keywords": ["renta", "irpf", "impuestos", "españa", "deducciones", "hacienda", "aeat", "hipoteca", "inversiones", "broker"],
+      "category": "personal-finance"
     }
   ]
 }
