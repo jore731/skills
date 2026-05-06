@@ -1,0 +1,12 @@
+{
+  "name": "renta",
+  "description": "Guía fiscal española basada en el Manual Práctico de Renta 2025 de la AEAT. Cubre IRPF, deducciones estatales y autonómicas, inversiones, brokers, hipotecas y vivienda habitual.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jorge Pulido",
+    "email": "jorge.pulido@digikube.io"
+  },
+  "keywords": ["renta", "irpf", "impuestos", "españa", "deducciones", "hacienda", "aeat", "hipoteca", "inversiones", "broker"],
+  "category": "personal-finance",
+  "skills": ["./skills/renta"]
+}
