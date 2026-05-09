@@ -231,6 +231,19 @@
         "navigation"
       ],
       "category": "engineering"
+    },
+    {
+      "name": "caveman",
+      "source": "caveman",
+      "description": "Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Use when user says caveman mode, less tokens, or be brief.",
+      "version": "1.0.0",
+      "keywords": [
+        "communication",
+        "brevity",
+        "tokens",
+        "compression"
+      ],
+      "category": "productivity"
     }
   ]
 }
