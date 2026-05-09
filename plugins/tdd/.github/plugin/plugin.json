@@ -1,0 +1,21 @@
+{
+  "name": "tdd",
+  "description": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions red-green-refactor, or asks for test-first development.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://github.com/mattpocock/skills"
+  },
+  "upstream": {
+    "repository": "mattpocock/skills",
+    "path": "skills/engineering/tdd",
+    "commit": "733d312884b3878a9a9cff693c5886943753a741"
+  },
+  "keywords": [
+    "tdd",
+    "testing",
+    "red-green-refactor",
+    "integration-tests"
+  ],
+  "category": "engineering"
+}

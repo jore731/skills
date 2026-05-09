@@ -1,0 +1,21 @@
+{
+  "name": "caveman",
+  "description": "Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Use when user says caveman mode, less tokens, or be brief.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://github.com/mattpocock/skills"
+  },
+  "upstream": {
+    "repository": "mattpocock/skills",
+    "path": "skills/productivity/caveman",
+    "commit": "733d312884b3878a9a9cff693c5886943753a741"
+  },
+  "keywords": [
+    "communication",
+    "brevity",
+    "tokens",
+    "compression"
+  ],
+  "category": "productivity"
+}

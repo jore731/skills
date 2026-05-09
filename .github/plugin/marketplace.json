@@ -13,9 +13,16 @@
     {
       "name": "devspace",
       "source": "devspace-plugins/devspace",
-      "description": "DevSpace development environment skills — open-source, client-only Kubernetes dev tool (CNCF Sandbox). Preferred alternative to Okteto, Tilt, and Skaffold.",
+      "description": "DevSpace development environment skills \u2014 open-source, client-only Kubernetes dev tool (CNCF Sandbox). Preferred alternative to Okteto, Tilt, and Skaffold.",
       "version": "1.0.0",
-      "keywords": ["devspace", "kubernetes", "dev-environment", "okteto", "tilt", "skaffold"],
+      "keywords": [
+        "devspace",
+        "kubernetes",
+        "dev-environment",
+        "okteto",
+        "tilt",
+        "skaffold"
+      ],
       "category": "developer-tools"
     },
     {
@@ -23,7 +30,17 @@
       "source": "work-dashboard",
       "description": "Aggregates pending work (PRs, issues, CI failures, work items) across GitHub, GitLab, and Azure DevOps into a unified markdown dashboard.",
       "version": "1.0.0",
-      "keywords": ["dashboard", "github", "gitlab", "azure-devops", "issues", "pull-requests", "work-items", "ci", "productivity"],
+      "keywords": [
+        "dashboard",
+        "github",
+        "gitlab",
+        "azure-devops",
+        "issues",
+        "pull-requests",
+        "work-items",
+        "ci",
+        "productivity"
+      ],
       "category": "productivity"
     },
     {
@@ -31,24 +48,216 @@
       "source": "write-a-skill",
       "description": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.",
       "version": "1.0.0",
-      "keywords": ["skill", "plugin", "create", "write", "build", "scaffold", "productivity"],
+      "keywords": [
+        "skill",
+        "plugin",
+        "create",
+        "write",
+        "build",
+        "scaffold",
+        "productivity"
+      ],
       "category": "productivity"
     },
     {
       "name": "thirdparty-skills",
       "source": "thirdparty-skills",
-      "description": "Manage third-party plugins — import from external repos, review for quality, and update from upstream with provenance tracking and commit discipline.",
+      "description": "Manage third-party plugins \u2014 import from external repos, review for quality, and update from upstream with provenance tracking and commit discipline.",
       "version": "1.0.0",
-      "keywords": ["thirdparty", "import", "update", "upstream", "provenance", "skills", "plugins"],
+      "keywords": [
+        "thirdparty",
+        "import",
+        "update",
+        "upstream",
+        "provenance",
+        "skills",
+        "plugins"
+      ],
       "category": "developer-tools"
     },
     {
       "name": "renta",
       "source": "renta",
-      "description": "Guía para la declaración de la renta en España (IRPF). Deducciones estatales y autonómicas, tratamiento fiscal de inversiones y brokers, y referencias al Manual Práctico de Renta de la AEAT.",
+      "description": "Gu\u00eda para la declaraci\u00f3n de la renta en Espa\u00f1a (IRPF). Deducciones estatales y auton\u00f3micas, tratamiento fiscal de inversiones y brokers, y referencias al Manual Pr\u00e1ctico de Renta de la AEAT.",
       "version": "1.0.0",
-      "keywords": ["renta", "irpf", "impuestos", "españa", "deducciones", "hacienda", "aeat", "hipoteca", "inversiones", "broker"],
+      "keywords": [
+        "renta",
+        "irpf",
+        "impuestos",
+        "espa\u00f1a",
+        "deducciones",
+        "hacienda",
+        "aeat",
+        "hipoteca",
+        "inversiones",
+        "broker"
+      ],
       "category": "personal-finance"
+    },
+    {
+      "name": "diagnose",
+      "source": "diagnose",
+      "description": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce, minimise, hypothesise, instrument, fix, regression-test. Use when user reports a bug, says something is broken/throwing/failing, or describes a performance regression.",
+      "version": "1.0.0",
+      "keywords": [
+        "diagnose",
+        "debug",
+        "bugs",
+        "performance",
+        "regression"
+      ],
+      "category": "engineering"
+    },
+    {
+      "name": "grill-with-docs",
+      "source": "grill-with-docs",
+      "description": "Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, ADRs) inline as decisions crystallise. Use when user wants to stress-test a plan against their project's language and documented decisions.",
+      "version": "1.0.0",
+      "keywords": [
+        "grilling",
+        "documentation",
+        "domain-model",
+        "adr",
+        "context"
+      ],
+      "category": "engineering"
+    },
+    {
+      "name": "improve-codebase-architecture",
+      "source": "improve-codebase-architecture",
+      "description": "Find deepening opportunities in a codebase to improve architecture, consolidate modules, and increase testability. Use when the user wants to find refactoring opportunities or make a codebase more AI-navigable.",
+      "version": "1.0.0",
+      "keywords": [
+        "architecture",
+        "refactoring",
+        "deepening",
+        "testability",
+        "modules"
+      ],
+      "category": "engineering"
+    },
+    {
+      "name": "prototype",
+      "source": "prototype",
+      "description": "Build a throwaway prototype to flush out a design \u2014 terminal app for logic questions or multiple UI variations. Use when user wants to prototype, sanity-check a data model, mock up a UI, or explore design options.",
+      "version": "1.0.0",
+      "keywords": [
+        "prototype",
+        "throwaway",
+        "ui",
+        "design",
+        "exploration"
+      ],
+      "category": "engineering"
+    },
+    {
+      "name": "setup-matt-pocock-skills",
+      "source": "setup-matt-pocock-skills",
+      "description": "Sets up per-repo configuration for Matt Pocock's engineering skills \u2014 issue tracker, triage labels, and domain doc layout. Run before first use of to-issues, triage, diagnose, tdd, or improve-codebase-architecture.",
+      "version": "1.0.0",
+      "keywords": [
+        "setup",
+        "configuration",
+        "issue-tracker",
+        "triage",
+        "domain"
+      ],
+      "category": "engineering"
+    },
+    {
+      "name": "tdd",
+      "source": "tdd",
+      "description": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions red-green-refactor, or asks for test-first development.",
+      "version": "1.0.0",
+      "keywords": [
+        "tdd",
+        "testing",
+        "red-green-refactor",
+        "integration-tests"
+      ],
+      "category": "engineering"
+    },
+    {
+      "name": "to-issues",
+      "source": "to-issues",
+      "description": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues or break down work.",
+      "version": "1.0.0",
+      "keywords": [
+        "issues",
+        "tickets",
+        "breakdown",
+        "vertical-slices",
+        "planning"
+      ],
+      "category": "engineering"
+    },
+    {
+      "name": "to-prd",
+      "source": "to-prd",
+      "description": "Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the current context.",
+      "version": "1.0.0",
+      "keywords": [
+        "prd",
+        "product-requirements",
+        "specification",
+        "planning"
+      ],
+      "category": "engineering"
+    },
+    {
+      "name": "triage",
+      "source": "triage",
+      "description": "Triage issues through a state machine driven by triage roles. Use when user wants to create an issue, triage issues, review incoming bugs or feature requests, or manage issue workflow.",
+      "version": "1.0.0",
+      "keywords": [
+        "triage",
+        "issues",
+        "workflow",
+        "state-machine",
+        "review"
+      ],
+      "category": "engineering"
+    },
+    {
+      "name": "zoom-out",
+      "source": "zoom-out",
+      "description": "Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the bigger picture.",
+      "version": "1.0.0",
+      "keywords": [
+        "zoom-out",
+        "context",
+        "architecture",
+        "overview",
+        "navigation"
+      ],
+      "category": "engineering"
+    },
+    {
+      "name": "caveman",
+      "source": "caveman",
+      "description": "Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Use when user says caveman mode, less tokens, or be brief.",
+      "version": "1.0.0",
+      "keywords": [
+        "communication",
+        "brevity",
+        "tokens",
+        "compression"
+      ],
+      "category": "productivity"
+    },
+    {
+      "name": "grill-me",
+      "source": "grill-me",
+      "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan or mentions grill me.",
+      "version": "1.0.0",
+      "keywords": [
+        "grilling",
+        "interview",
+        "plan",
+        "design",
+        "stress-test"
+      ],
+      "category": "productivity"
     }
   ]
 }
