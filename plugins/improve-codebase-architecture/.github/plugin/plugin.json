@@ -1,0 +1,22 @@
+{
+  "name": "improve-codebase-architecture",
+  "description": "Find deepening opportunities in a codebase to improve architecture, consolidate modules, and increase testability. Use when the user wants to find refactoring opportunities or make a codebase more AI-navigable.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://github.com/mattpocock/skills"
+  },
+  "upstream": {
+    "repository": "mattpocock/skills",
+    "path": "skills/engineering/improve-codebase-architecture",
+    "commit": "733d312884b3878a9a9cff693c5886943753a741"
+  },
+  "keywords": [
+    "architecture",
+    "refactoring",
+    "deepening",
+    "testability",
+    "modules"
+  ],
+  "category": "engineering"
+}

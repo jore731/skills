@@ -121,6 +121,20 @@
         "context"
       ],
       "category": "engineering"
+    },
+    {
+      "name": "improve-codebase-architecture",
+      "source": "improve-codebase-architecture",
+      "description": "Find deepening opportunities in a codebase to improve architecture, consolidate modules, and increase testability. Use when the user wants to find refactoring opportunities or make a codebase more AI-navigable.",
+      "version": "1.0.0",
+      "keywords": [
+        "architecture",
+        "refactoring",
+        "deepening",
+        "testability",
+        "modules"
+      ],
+      "category": "engineering"
     }
   ]
 }
