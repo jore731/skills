@@ -1,0 +1,11 @@
+{
+  "name": "thirdparty-skills",
+  "description": "Manage third-party plugins — import from external repos, review for quality, and update from upstream with provenance tracking and commit discipline.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jorge Pulido",
+    "url": "https://github.com/jore731/skills"
+  },
+  "keywords": ["thirdparty", "import", "update", "upstream", "provenance", "skills", "plugins"],
+  "category": "developer-tools"
+}

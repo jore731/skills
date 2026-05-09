@@ -35,6 +35,14 @@
       "category": "productivity"
     },
     {
+      "name": "thirdparty-skills",
+      "source": "thirdparty-skills",
+      "description": "Manage third-party plugins — import from external repos, review for quality, and update from upstream with provenance tracking and commit discipline.",
+      "version": "1.0.0",
+      "keywords": ["thirdparty", "import", "update", "upstream", "provenance", "skills", "plugins"],
+      "category": "developer-tools"
+    },
+    {
       "name": "renta",
       "source": "renta",
       "description": "Guía para la declaración de la renta en España (IRPF). Deducciones estatales y autonómicas, tratamiento fiscal de inversiones y brokers, y referencias al Manual Práctico de Renta de la AEAT.",
