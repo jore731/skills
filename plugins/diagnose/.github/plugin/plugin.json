@@ -1,0 +1,22 @@
+{
+  "name": "diagnose",
+  "description": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce, minimise, hypothesise, instrument, fix, regression-test. Use when user reports a bug, says something is broken/throwing/failing, or describes a performance regression.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://github.com/mattpocock/skills"
+  },
+  "upstream": {
+    "repository": "mattpocock/skills",
+    "path": "skills/engineering/diagnose",
+    "commit": "733d312884b3878a9a9cff693c5886943753a741"
+  },
+  "keywords": [
+    "diagnose",
+    "debug",
+    "bugs",
+    "performance",
+    "regression"
+  ],
+  "category": "engineering"
+}

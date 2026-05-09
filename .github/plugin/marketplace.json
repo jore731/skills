@@ -13,9 +13,16 @@
     {
       "name": "devspace",
       "source": "devspace-plugins/devspace",
-      "description": "DevSpace development environment skills — open-source, client-only Kubernetes dev tool (CNCF Sandbox). Preferred alternative to Okteto, Tilt, and Skaffold.",
+      "description": "DevSpace development environment skills \u2014 open-source, client-only Kubernetes dev tool (CNCF Sandbox). Preferred alternative to Okteto, Tilt, and Skaffold.",
       "version": "1.0.0",
-      "keywords": ["devspace", "kubernetes", "dev-environment", "okteto", "tilt", "skaffold"],
+      "keywords": [
+        "devspace",
+        "kubernetes",
+        "dev-environment",
+        "okteto",
+        "tilt",
+        "skaffold"
+      ],
       "category": "developer-tools"
     },
     {
@@ -23,7 +30,17 @@
       "source": "work-dashboard",
       "description": "Aggregates pending work (PRs, issues, CI failures, work items) across GitHub, GitLab, and Azure DevOps into a unified markdown dashboard.",
       "version": "1.0.0",
-      "keywords": ["dashboard", "github", "gitlab", "azure-devops", "issues", "pull-requests", "work-items", "ci", "productivity"],
+      "keywords": [
+        "dashboard",
+        "github",
+        "gitlab",
+        "azure-devops",
+        "issues",
+        "pull-requests",
+        "work-items",
+        "ci",
+        "productivity"
+      ],
       "category": "productivity"
     },
     {
@@ -31,24 +48,65 @@
       "source": "write-a-skill",
       "description": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.",
       "version": "1.0.0",
-      "keywords": ["skill", "plugin", "create", "write", "build", "scaffold", "productivity"],
+      "keywords": [
+        "skill",
+        "plugin",
+        "create",
+        "write",
+        "build",
+        "scaffold",
+        "productivity"
+      ],
       "category": "productivity"
     },
     {
       "name": "thirdparty-skills",
       "source": "thirdparty-skills",
-      "description": "Manage third-party plugins — import from external repos, review for quality, and update from upstream with provenance tracking and commit discipline.",
+      "description": "Manage third-party plugins \u2014 import from external repos, review for quality, and update from upstream with provenance tracking and commit discipline.",
       "version": "1.0.0",
-      "keywords": ["thirdparty", "import", "update", "upstream", "provenance", "skills", "plugins"],
+      "keywords": [
+        "thirdparty",
+        "import",
+        "update",
+        "upstream",
+        "provenance",
+        "skills",
+        "plugins"
+      ],
       "category": "developer-tools"
     },
     {
       "name": "renta",
       "source": "renta",
-      "description": "Guía para la declaración de la renta en España (IRPF). Deducciones estatales y autonómicas, tratamiento fiscal de inversiones y brokers, y referencias al Manual Práctico de Renta de la AEAT.",
+      "description": "Gu\u00eda para la declaraci\u00f3n de la renta en Espa\u00f1a (IRPF). Deducciones estatales y auton\u00f3micas, tratamiento fiscal de inversiones y brokers, y referencias al Manual Pr\u00e1ctico de Renta de la AEAT.",
       "version": "1.0.0",
-      "keywords": ["renta", "irpf", "impuestos", "españa", "deducciones", "hacienda", "aeat", "hipoteca", "inversiones", "broker"],
+      "keywords": [
+        "renta",
+        "irpf",
+        "impuestos",
+        "espa\u00f1a",
+        "deducciones",
+        "hacienda",
+        "aeat",
+        "hipoteca",
+        "inversiones",
+        "broker"
+      ],
       "category": "personal-finance"
+    },
+    {
+      "name": "diagnose",
+      "source": "diagnose",
+      "description": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce, minimise, hypothesise, instrument, fix, regression-test. Use when user reports a bug, says something is broken/throwing/failing, or describes a performance regression.",
+      "version": "1.0.0",
+      "keywords": [
+        "diagnose",
+        "debug",
+        "bugs",
+        "performance",
+        "regression"
+      ],
+      "category": "engineering"
     }
   ]
 }
