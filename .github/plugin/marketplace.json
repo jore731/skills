@@ -244,6 +244,20 @@
         "compression"
       ],
       "category": "productivity"
+    },
+    {
+      "name": "grill-me",
+      "source": "grill-me",
+      "description": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan or mentions grill me.",
+      "version": "1.0.0",
+      "keywords": [
+        "grilling",
+        "interview",
+        "plan",
+        "design",
+        "stress-test"
+      ],
+      "category": "productivity"
     }
   ]
 }
