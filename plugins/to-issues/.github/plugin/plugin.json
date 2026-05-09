@@ -1,0 +1,22 @@
+{
+  "name": "to-issues",
+  "description": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues or break down work.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://github.com/mattpocock/skills"
+  },
+  "upstream": {
+    "repository": "mattpocock/skills",
+    "path": "skills/engineering/to-issues",
+    "commit": "733d312884b3878a9a9cff693c5886943753a741"
+  },
+  "keywords": [
+    "issues",
+    "tickets",
+    "breakdown",
+    "vertical-slices",
+    "planning"
+  ],
+  "category": "engineering"
+}
