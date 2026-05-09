@@ -135,6 +135,20 @@
         "modules"
       ],
       "category": "engineering"
+    },
+    {
+      "name": "prototype",
+      "source": "prototype",
+      "description": "Build a throwaway prototype to flush out a design \u2014 terminal app for logic questions or multiple UI variations. Use when user wants to prototype, sanity-check a data model, mock up a UI, or explore design options.",
+      "version": "1.0.0",
+      "keywords": [
+        "prototype",
+        "throwaway",
+        "ui",
+        "design",
+        "exploration"
+      ],
+      "category": "engineering"
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "name": "prototype",
+  "description": "Build a throwaway prototype to flush out a design \u2014 terminal app for logic questions or multiple UI variations. Use when user wants to prototype, sanity-check a data model, mock up a UI, or explore design options.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://github.com/mattpocock/skills"
+  },
+  "upstream": {
+    "repository": "mattpocock/skills",
+    "path": "skills/engineering/prototype",
+    "commit": "733d312884b3878a9a9cff693c5886943753a741"
+  },
+  "keywords": [
+    "prototype",
+    "throwaway",
+    "ui",
+    "design",
+    "exploration"
+  ],
+  "category": "engineering"
+}
