@@ -1,0 +1,13 @@
+{
+  "name": "tech-docs",
+  "description": "Navigate and research technical documentation — auto-detects doc frameworks, maps site structure, and synthesizes answers with citations.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jorge Pulido",
+    "url": "https://github.com/jore731/skills"
+  },
+  "keywords": ["documentation", "docs", "api-reference", "research", "docusaurus", "readthedocs", "mkdocs", "openapi"],
+  "category": "productivity",
+  "agents": "agents/",
+  "skills": "skills/"
+}

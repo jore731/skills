@@ -258,6 +258,14 @@
         "stress-test"
       ],
       "category": "productivity"
+    },
+    {
+      "name": "tech-docs",
+      "source": "tech-docs",
+      "description": "Navigate and research technical documentation sites, API references, and local markdown files with auto-detection of doc frameworks and a structured 3-phase workflow.",
+      "version": "1.0.0",
+      "keywords": ["documentation", "docs", "api-reference", "research", "docusaurus", "readthedocs", "mkdocs", "openapi"],
+      "category": "productivity"
     }
   ]
 }
