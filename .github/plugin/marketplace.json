@@ -266,6 +266,15 @@
       "version": "1.0.0",
       "keywords": ["documentation", "docs", "api-reference", "research", "docusaurus", "readthedocs", "mkdocs", "openapi"],
       "category": "productivity"
+    },
+    {
+      "name": "figma",
+      "source": "figma",
+      "description": "Figma MCP server skills for common design workflows — write to canvas, generate designs, diagrams, libraries, slides, FigJam boards, and Code Connect integration.",
+      "version": "2.2.12",
+      "keywords": ["figma", "design", "mcp", "ui", "code-connect", "figjam", "slides", "diagrams", "library"],
+      "category": "design",
+      "upstream": "https://github.com/figma/mcp-server-guide"
     }
   ]
 }

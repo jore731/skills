@@ -1,0 +1,36 @@
+{
+  "name": "figma",
+  "description": "Figma MCP server skills for common design workflows — write to canvas, generate designs, diagrams, libraries, slides, FigJam boards, and Code Connect integration.",
+  "version": "2.2.12",
+  "author": {
+    "name": "Figma",
+    "url": "https://www.figma.com"
+  },
+  "upstream": {
+    "repository": "figma/mcp-server-guide",
+    "path": "skills",
+    "commit": "a742f0a700a7772ff5ed85f7c9fc1dad5afa9fcc"
+  },
+  "keywords": [
+    "figma",
+    "design",
+    "mcp",
+    "ui",
+    "code-connect",
+    "figjam",
+    "slides",
+    "diagrams",
+    "library"
+  ],
+  "category": "design",
+  "skills": [
+    "./skills/figma-use",
+    "./skills/figma-code-connect",
+    "./skills/figma-create-new-file",
+    "./skills/figma-generate-design",
+    "./skills/figma-generate-diagram",
+    "./skills/figma-generate-library",
+    "./skills/figma-use-figjam",
+    "./skills/figma-use-slides"
+  ]
+}
