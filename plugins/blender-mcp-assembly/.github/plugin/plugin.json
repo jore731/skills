@@ -1,0 +1,26 @@
+{
+  "name": "blender-mcp-assembly",
+  "description": "Geometry-building skill for creating reliable 3D models in Blender via MCP. Prevents common modelling errors by planning connections, using correct primitive scaling, avoiding faulty cylinder rotations, verifying overlaps, and auditing transforms.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ProfRino",
+    "url": "https://github.com/ProfRino/Blender-MCP-Assemply-Skill"
+  },
+  "upstream": {
+    "repository": "ProfRino/Blender-MCP-Assemply-Skill",
+    "path": ".",
+    "commit": "ae0f68be1b4d935663e7cc0e8a1a2c7b8697eaaf"
+  },
+  "keywords": [
+    "blender",
+    "mcp",
+    "3d",
+    "geometry",
+    "assembly",
+    "modelling"
+  ],
+  "category": "3d-modelling",
+  "skills": [
+    "blender-assembly"
+  ]
+}

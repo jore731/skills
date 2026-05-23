@@ -275,6 +275,21 @@
       "keywords": ["figma", "design", "mcp", "ui", "code-connect", "figjam", "slides", "diagrams", "library"],
       "category": "design",
       "upstream": "https://github.com/figma/mcp-server-guide"
+    },
+    {
+      "name": "blender-mcp-assembly",
+      "source": "blender-mcp-assembly",
+      "description": "Geometry-building skill for creating reliable 3D models in Blender via MCP. Prevents common modelling errors by planning connections, using correct primitive scaling, avoiding faulty cylinder rotations, verifying overlaps, and auditing transforms.",
+      "version": "1.0.0",
+      "keywords": [
+        "blender",
+        "mcp",
+        "3d",
+        "geometry",
+        "assembly",
+        "modelling"
+      ],
+      "category": "3d-modelling"
     }
   ]
 }
