@@ -21,6 +21,6 @@
   ],
   "category": "3d-modelling",
   "skills": [
-    "blender-assembly"
+    "./skills/blender-assembly"
   ]
 }
