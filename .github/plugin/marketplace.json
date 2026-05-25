@@ -290,6 +290,29 @@
         "modelling"
       ],
       "category": "3d-modelling"
+    },
+    {
+      "name": "openclaw",
+      "source": "openclaw",
+      "description": "Configure and manage OpenClaw — the self-hosted AI gateway connecting Discord, Telegram, WhatsApp, Slack, Signal, iMessage, Matrix, Microsoft Teams, and more to AI coding agents.",
+      "version": "1.0.0",
+      "keywords": [
+        "openclaw",
+        "gateway",
+        "discord",
+        "telegram",
+        "whatsapp",
+        "slack",
+        "signal",
+        "imessage",
+        "matrix",
+        "teams",
+        "chat",
+        "ai-agent",
+        "multi-agent",
+        "configuration"
+      ],
+      "category": "developer-tools"
     }
   ]
 }

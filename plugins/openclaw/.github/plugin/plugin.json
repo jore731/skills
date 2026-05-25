@@ -1,0 +1,27 @@
+{
+  "name": "openclaw",
+  "description": "Configure and manage OpenClaw — the self-hosted AI gateway connecting Discord, Telegram, WhatsApp, Slack, Signal, iMessage, Matrix, Microsoft Teams, and more to AI coding agents. Covers installation, gateway configuration, channel setup, multi-agent routing, troubleshooting, and CLI usage.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jorge Pulido",
+    "email": "jorge.pulido@digikube.io"
+  },
+  "keywords": [
+    "openclaw",
+    "gateway",
+    "discord",
+    "telegram",
+    "whatsapp",
+    "slack",
+    "signal",
+    "imessage",
+    "matrix",
+    "teams",
+    "chat",
+    "ai-agent",
+    "multi-agent",
+    "configuration"
+  ],
+  "category": "developer-tools",
+  "skills": ["./skills/openclaw"]
+}
