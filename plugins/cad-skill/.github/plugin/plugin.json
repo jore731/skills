@@ -1,0 +1,27 @@
+{
+  "name": "cad-skill",
+  "description": "Parametric 3D-printable model generation with CadQuery. Use when the user wants to design a physical object to manufacture via FDM 3D printing — enclosures, brackets, mounts, cases, adapters — writing parametric Python scripts, exporting STL, rendering previews, and iterating on print-friendly geometry.",
+  "version": "1.0.0",
+  "author": {
+    "name": "flowful-ai",
+    "url": "https://github.com/flowful-ai/cad-skill"
+  },
+  "upstream": {
+    "repository": "flowful-ai/cad-skill",
+    "path": ".",
+    "commit": "67f6c11a4e2b59d4b392c15dcb8fa48a0480632f"
+  },
+  "keywords": [
+    "cad",
+    "cadquery",
+    "3d-printing",
+    "stl",
+    "parametric",
+    "fdm",
+    "modelling"
+  ],
+  "category": "3d-modelling",
+  "skills": [
+    "./skills/parametric-3d-printing"
+  ]
+}
