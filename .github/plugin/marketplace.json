@@ -330,6 +330,22 @@
       ],
       "category": "3d-modelling",
       "upstream": "https://github.com/flowful-ai/cad-skill"
+    },
+    {
+      "name": "use-devbox",
+      "source": "use-devbox",
+      "description": "Run commands inside a devbox environment when a directory provides one. Use when a `devbox.json` exists — devbox supplies tools and scripts (psql, python, gcloud, node, etc.) the bare shell lacks. Prefer the devbox-provided binary over the system one.",
+      "version": "1.0.0",
+      "keywords": [
+        "devbox",
+        "nix",
+        "dev-environment",
+        "reproducible",
+        "packages",
+        "developer-tools"
+      ],
+      "category": "developer-tools",
+      "upstream": "https://github.com/jetify-com/devbox"
     }
   ]
 }

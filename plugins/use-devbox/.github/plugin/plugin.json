@@ -1,0 +1,26 @@
+{
+  "name": "use-devbox",
+  "description": "Run commands inside a devbox environment when a directory provides one. Use when a `devbox.json` exists in the working directory or an ancestor/subdir root — devbox can supply tools and scripts (psql, python, gcloud, node, etc.) the bare shell lacks. Prefer the devbox-provided binary over the system one.",
+  "version": "1.0.0",
+  "author": {
+    "name": "jetify-com",
+    "url": "https://github.com/jetify-com/devbox"
+  },
+  "upstream": {
+    "repository": "jetify-com/devbox",
+    "path": ".agents/skills/use-devbox",
+    "commit": "6235efab23a8d33e067a3fade157dedc5e6220ab"
+  },
+  "keywords": [
+    "devbox",
+    "nix",
+    "dev-environment",
+    "reproducible",
+    "packages",
+    "developer-tools"
+  ],
+  "category": "developer-tools",
+  "skills": [
+    "./skills/use-devbox"
+  ]
+}
