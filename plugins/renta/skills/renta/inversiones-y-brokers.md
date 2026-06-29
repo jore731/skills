@@ -80,6 +80,49 @@ Para acciones y ETFs cotizados:
 
 ---
 
+## Datos necesarios por broker (qué pedir y dónde obtenerlo)
+
+> ⚠️ **Regla de oro:** el resumen/extracto anual de un broker **rara vez incluye todas las comisiones**. Pide siempre el documento de detalle por operación y, para CFDs, el estado de pérdidas y ganancias dedicado. Verifica que las comisiones declaradas no salgan a `0,00 €`.
+
+### eToro
+
+| Documento | Qué contiene | Cómo obtenerlo |
+|-----------|--------------|----------------|
+| **Account Statement (`.xlsx`)** | Detalle por operación: posiciones cerradas (acciones y CFD), comisiones, **overnight fees en columna propia**, dividendos, conversión de divisa | App/web → *Settings/Configuración → Account → Account Statement* → rango de fechas (1 ene–31 dic) → exportar a Excel |
+| **Informe fiscal español (modelos 100 y 714)** `.pdf` | Resumen para residentes ES; útil como contraste, **no** para el detalle | App/web → *Documentos / Informes fiscales* |
+
+**Claves eToro:**
+- **Separa acciones reales de CFDs** — van en hojas/filas distintas del xlsx y tributan igual (Cap. 11) pero conviene desglosarlos para cuadrar.
+- Las **overnight fees** aparecen en **columna propia** → réstalas del resultado del CFD (gasto inherente).
+- El **spread** ya está embebido en el precio de ejecución (no se ajusta a mano).
+- Usa el xlsx como fuente de cálculo; el PDF de modelos solo para verificar totales.
+
+### Revolut
+
+| Documento | Qué contiene | Cómo obtenerlo |
+|-----------|--------------|----------------|
+| **Extracto de cuenta anual (`.csv`/`.pdf`)** | Resumen por cuenta (corretaje, robo-advisor, CFD, ahorro, MMF), ventas, dividendos. **El resumen CFD reporta `Comisiones y otros cargos = 0,00 €`** | App → *cuenta → Extractos / Statements* → tipo "Consolidado/Anual" |
+| **Profit and Loss Statement de la cuenta CFD (`.pdf`)** ⚠️ | **Las comisiones reales del CFD**: *Trading fees* + *Overnight fees* en la sección *Other income & fees*, además del *Gross PnL* | App → *Invest/Trading → cuenta CFD → Documentos → Profit and Loss Statement* (documento **distinto** del extracto) |
+
+> 🚨 **Gotcha crítico Revolut CFD:** el extracto de cuenta da el resultado CFD como **neto** pero con `Comisiones = 0,00 €`; esa cifra es en realidad el **Gross PnL** (sin comisiones). Las comisiones (trading + overnight) están **únicamente** en el *Profit and Loss Statement* de la cuenta CFD. Si solo usas el CSV/extracto, **te dejas las comisiones sin deducir**.
+>
+> **Resultado fiscal CFD correcto = Gross PnL − (Trading fees + Overnight fees + ajustes).**
+
+**Claves Revolut:**
+- **Pide siempre el P&L Statement de la cuenta CFD** además del extracto; sin él faltan las comisiones.
+- El extracto CFD da el neto como `(Σ valor cierre) − (Σ valor apertura)` sobre nocionales **agregados**; el P&L Statement da el *Gross PnL* sumando el resultado **por operación** a su tipo de cambio diario → pueden diferir en **decenas/centenas de €** por redondeo de divisa (no es error).
+- El extracto mezcla **dos formatos numéricos**: español con sufijo (`1.356,11€`) e inglés con prefijo (`US$1,107.86`); identifícalo por la posición del símbolo de divisa.
+- Distingue las cuentas: **corretaje** (acciones reales), **robo-advisor** (gestión de carteras → comisión NO deducible) y **CFD**.
+
+### Checklist de verificación (cualquier broker)
+
+- [ ] ¿La comisión total declarada es > 0? Si un resumen dice `0,00 €` en comisiones, **busca el documento de detalle**.
+- [ ] ¿Has separado acciones/ETF (transmisión de valores) de CFD/derivados (Art. 37.1.m)?
+- [ ] ¿Has restado overnight fees y trading fees del resultado de los CFD?
+- [ ] ¿Las cifras del borrador (TaxDown u otro) **aparecen** en algún documento fuente? Si no cuadran con ninguna, revisa qué fichero usó el preparador.
+
+---
+
 ## CFDs, futuros y opciones (Art. 37.1.m)
 
 Las operaciones en mercados de futuros y opciones (incluidos CFDs) tributan como **ganancias patrimoniales** cuando no son operaciones de cobertura vinculadas a una actividad económica.

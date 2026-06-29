@@ -1,6 +1,6 @@
 ---
 name: renta
-description: Guía fiscal española basada en el Manual Práctico de Renta 2025 de la AEAT. Cubre IRPF completo, deducciones estatales y autonómicas (15 CCAA), inversiones, brokers, hipotecas y vivienda habitual. Usar cuando el usuario pregunte sobre declaración de la renta, IRPF, impuestos en España, hacienda, deducciones fiscales, retenciones, nómina, hipoteca, vivienda habitual, acciones, ETFs, fondos, criptomonedas, dividendos, brokers (eToro, DEGIRO, Interactive Brokers), ganancias patrimoniales, o modelos tributarios.
+description: Guía fiscal española basada en el Manual Práctico de Renta 2025 de la AEAT. Cubre IRPF completo, deducciones estatales y autonómicas (15 CCAA), inversiones, brokers, hipotecas y vivienda habitual. Usar cuando el usuario pregunte sobre declaración de la renta, IRPF, impuestos en España, hacienda, deducciones fiscales, retenciones, nómina, hipoteca, vivienda habitual, acciones, ETFs, fondos, criptomonedas, dividendos, brokers (eToro, Revolut, DEGIRO, Interactive Brokers), ganancias patrimoniales, CFDs, o modelos tributarios.
 ---
 
 # Renta — IRPF España
@@ -36,7 +36,7 @@ Hasta 6.000 € → 19% · 6.000–50.000 € → 21% · 50.000–200.000 € �
 Consulta estos archivos para dar respuestas con URLs concretas de la AEAT:
 
 - **[manual-referencias.md](manual-referencias.md)** — Índice completo del manual: 18 capítulos con todas las sub-secciones y URLs directas
-- **[inversiones-y-brokers.md](inversiones-y-brokers.md)** — Tributación de acciones, ETFs, CFDs, criptomonedas, dividendos, comisiones de brokers, FIFO, regla antiaplicación
+- **[inversiones-y-brokers.md](inversiones-y-brokers.md)** — Tributación de acciones, ETFs, CFDs, criptomonedas, dividendos, comisiones de brokers, FIFO, regla antiaplicación. Incluye **qué datos pedir a cada broker y cómo obtenerlos** (eToro, Revolut) con el gotcha de las comisiones CFD de Revolut
 - **[deducciones-vivienda-habitual.md](deducciones-vivienda-habitual.md)** — Deducciones por hipoteca vivienda habitual (régimen transitorio estatal + 7 CCAA)
 - **`deducciones-autonomicas/`** — Un archivo por CCAA con todas las deducciones autonómicas y URLs:
   andalucia · aragon · asturias · baleares · canarias · cantabria · castilla-la-mancha · castilla-y-leon · cataluna · extremadura · galicia · madrid · murcia · la-rioja · comunitat-valenciana
